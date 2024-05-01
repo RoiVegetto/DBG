@@ -1,6 +1,7 @@
-import './App.css';
+import './Styles/Main.scss';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Layout from './Components/Layout';
 import Connexion from './Pages/Connexion';
 import Inscription from './Pages/Inscription';
 import Home from './Pages/Home';
@@ -15,16 +16,20 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/connexion" component={Connexion} />
-        <Route path="/inscription" component={Inscription} />
-        <Route path="/home" component={Home} />
-        <Route path="/info-perso" component={InfoPerso} />
-        <Route path="/liste-perso" component={ListePerso} />
-        <Route path="/mode-histoire" component={ModeHistoire} />
-        <Route path="/map-monde" component={MapMonde} />
-        <Route path="/inventaire" component={Inventaire} />
-        <Route path="/parametres" component={Parametres} />
-        <Route path="*" component={Home} />
+        <Route path="/connexion" element={<Connexion />} />
+        <Route path="/inscription" element={<Inscription />} />
+
+        <Route path="/" element={<Layout />}>
+          <Route path="home" element={<Home />} />
+          <Route path="info-perso" element={<InfoPerso />} />
+          <Route path="liste-perso" element={<ListePerso />} />
+          <Route path="mode-histoire" element={<ModeHistoire />} />
+          <Route path="map-monde" element={<MapMonde />} />
+          <Route path="inventaire" element={<Inventaire />} />
+          <Route path="parametres" element={<Parametres />} />
+        </Route>
+
+        <Route path="*" element={<Home />} />
       </Routes>
     </Router>
   );

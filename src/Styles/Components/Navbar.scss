@@ -1,0 +1,29 @@
+@import '../Base/Variables';
+
+.navbar {
+    background-color: $primary-color; // Utilisez une variable SASS définie précédemment
+    padding: 10px;
+  
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex; // Afficher les éléments en ligne
+      justify-content: space-around; // Espacement entre les éléments
+    }
+  
+    li {
+      margin: 0;
+  
+      a {
+        text-decoration: none; // Pas de soulignement sur les liens
+        color: white;
+        font-weight: bold;
+  
+        &:hover {
+          color: $secondary-color; // Changement de couleur au survol
+        }
+      }
+    }
+  }
+  

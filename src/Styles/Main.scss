@@ -1,0 +1,19 @@
+// Importation des fichiers de base
+@import './Base/Variables';
+@import './Base/Mixins';
+@import './Base/Reset';
+
+// Importation des composants
+@import './Components/Header';
+@import './Components/Footer';
+
+// Importation des layouts
+@import './Layouts/Layout';
+@import './Layouts/Home';
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $background-color;
+    font-family: 'Arial, sans-serif';
+  }
