@@ -1,0 +1,12 @@
+{
+  "character": {
+    "level": 5,
+    "exp": 5000,
+    "health": 100,
+    "attack": 25,
+    "defense": 15,
+    "magic": 20,
+    "speed": 10,
+    "critical": 1000
+  }
+}

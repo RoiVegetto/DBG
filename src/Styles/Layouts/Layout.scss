@@ -1,14 +1,21 @@
-@import '../Base/Variables';
+@import '../Base/variables'; // Importation des variables SASS
 
 .layout-container {
-    min-height: 100vh; // Pour s'assurer que le contenu occupe toute la hauteur de la page
-    background-color: $background-color; // Utilisation de la variable SASS
-    display: flex;
-    flex-direction: column;
-  }
-  
-  main {
-    flex: 1; // Cela assure que le contenu principal occupe le reste de l'espace disponible
-    padding: 20px; // Un peu d'espace autour du contenu
-  }
-  
+  min-height: 100vh; // Pour s'assurer que le contenu occupe toute la hauteur de la page
+  background-color: $background-color; // Utilisation de la variable SASS
+}
+
+.content-wrapper {
+  display: flex; // Disposition horizontale pour la sidebar et le contenu principal
+}
+
+.sidebar {
+  width: 200px; // Largeur de la sidebar (ajustez selon vos besoins)
+  background-color: $secondary-color; // Style pour la sidebar
+}
+
+main {
+  flex: 1; // Cela assure que le contenu principal occupe le reste de l'espace disponible
+  padding: 20px; // Un peu d'espace autour du contenu
+  background-color: $primary-color; // Couleur de fond du contenu principal
+}
