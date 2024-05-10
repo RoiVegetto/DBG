@@ -2,8 +2,7 @@ import './Styles/Main.scss';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Layout from './Components/Layout';
-import Connexion from './Pages/Connexion';
-import Inscription from './Pages/Inscription';
+import Connexion from './Pages/ConnexionInscription';
 import Home from './Pages/Home';
 import InfoPerso from './Pages/InfoPerso';
 import ListePerso from './Pages/ListePerso';
@@ -17,7 +16,6 @@ function App() {
     <Router>
       <Routes>
         <Route path="/connexion" element={<Connexion />} />
-        <Route path="/inscription" element={<Inscription />} />
 
         <Route path="/" element={<Layout />}>
           <Route path="home" element={<Home />} />
