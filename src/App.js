@@ -10,6 +10,7 @@ import ModeHistoire from './Pages/ModeHistoire';
 import MapMonde from './Pages/MapMonde';
 import Inventaire from './Pages/Inventaire';
 import Parametres from './Pages/Parametre';
+import Fight from './Pages/Fight';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="home" element={<Home />} />
           <Route path="info-perso" element={<InfoPerso />} />
           <Route path="liste-perso" element={<ListePerso />} />
+          <Route path="fight" element={<Fight />} />
           <Route path="mode-histoire" element={<ModeHistoire />} />
           <Route path="map-monde" element={<MapMonde />} />
           <Route path="inventaire" element={<Inventaire />} />

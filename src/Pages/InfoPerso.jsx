@@ -11,20 +11,35 @@ function InfoPerso() {
   }, []); // Appel une seule fois au chargement du composant
 
   if (!character) {
-    return <div>Chargement...</div>; // Affichage pendant le chargement
+    return <div>Chargement...</div>;
   }
 
   return (
-    <div>
+    <div className="info-perso-container">
       <h2>Profil du Personnage</h2>
-      <p>Niveau : {character.level}</p>
-      <p>Expérience : {character.exp}</p>
-      <p>Vie : {character.health}</p>
-      <p>Attaque : {character.attack}</p>
-      <p>Défense : {character.defense}</p>
-      <p>Magie : {character.magic}</p>
-      <p>Vitesse : {character.speed}</p>
-      <p>Critique : {character.critical}</p>
+      <div className="info-container">
+        <div className="left-info">
+          <p>Niveau : {character.level}</p>
+          <p>Attaque : {character.attack}</p>
+          <p>Défense : {character.defense}</p>
+          <p>Magie : {character.magic}</p>
+          <p>Critique : {character.critical}</p>
+          <p>Vitesse : {character.speed}</p>
+        </div>
+        <img src="/images/gokulvl1.png" alt="Personnage" />
+        <div className="right-info">
+          <p>KI : {character.ki}</p>
+          <p>Victoires : {character.victories}</p>
+          <p>Défaites : {character.defeats}</p>
+          <p>Kills : {character.kills}</p>
+        </div>
+      </div>
+      <div className="xp-bar">
+        <p>Expérience : {character.pourcentage}</p>
+        <div className="progress-bar">
+          <div className="progress" style={{ width: `${(character.exp / character.nextLevelExp) * 100}%` }}></div>
+        </div>
+      </div>
     </div>
   );
 }
